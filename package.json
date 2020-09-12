@@ -1,0 +1,52 @@
+{
+  "name": "calindra-backend-challenge",
+  "version": "1.0.0",
+  "description": "RestAPI for Calindra Tech backend code challenge",
+  "main": "src/server.js",
+  "repository": "https://github.com/christianodejesus/calindra-backend-challenge.git",
+  "author": "Christiano Marques <https://github.com/christianodejesus>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./src/",
+    "dev": "./node_modules/.bin/nodemon --exec sucrase-node ./src/server.js",
+    "prebuild": "rm -Rf build/**",
+    "build": "./node_modules/.bin/babel ./src -d",
+    "build:dev": "npm run build -- ./build/debug --source-maps",
+    "build:prod": "npm run build -- ./build/release",
+    "prestart": "npm run build:prod",
+    "start": "node ./build/release/server.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.6",
+    "@googlemaps/google-maps-services-js": "^3.1.6",
+    "@koa/cors": "^3.0.0",
+    "@koa/router": "^8.0.8",
+    "dotenv": "^8.2.0",
+    "http-status": "^1.4.2",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "mongoose": "^5.9.13"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "eslint": "^7.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "nodemon": "^2.0.3",
+    "sucrase": "^3.14.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
+  }
+}
