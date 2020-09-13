@@ -9,6 +9,12 @@ RestAPI for Calindra Tech backend challenge
 - [Google Maps Services Api](https://github.com/googlemaps/google-maps-services-js)
 <br><br>
 
+## Online Version
+
+This API is online at [https://geocode-distances-api.herokuapp.com/](https://geocode-distances-api.herokuapp.com/).
+<br><br>
+
+
 ## Installation and configuration
 
 Download or clone API source code and follow above steps
@@ -32,11 +38,6 @@ $ npm run build # To build and run the API
 $ npm start
 ```
 <br>
-
-## Live API Version
-
-This API is running in one live version that can be accessed at [https://geocode-distances-api.herokuapp.com/](https://geocode-distances-api.herokuapp.com/).
-<br><br>
 
 ## Geocode API Endpoints
 <br>
