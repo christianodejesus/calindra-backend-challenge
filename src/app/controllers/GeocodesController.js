@@ -77,7 +77,7 @@ class GeocodesController {
         }
       }
 
-      const sorted = ctx.body.distances.sort((item1, item2) => item1.distance > item2.distance)
+      const sorted = ctx.body.distances.sort((item1, item2) => item1.distance - item2.distance)
       ctx.body.nearest = sorted[0]
       ctx.body.farthest = sorted[sorted.length - 1]
     }
