@@ -28,7 +28,8 @@ Now you can run the Geocode Distances API with the commands...
 ```bash
 $ npm run dev # To run the API for development
 # or
-$ npm start # To build and run the API
+$ npm run build # To build and run the API
+$ npm start
 ```
 <br>
 
