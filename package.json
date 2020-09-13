@@ -13,7 +13,6 @@
     "prebuild": "rm -Rf build/**",
     "build": "./node_modules/.bin/babel ./src -d ./build/release",
     "build:dev": "npm run prebuild && ./node_modules/.bin/babel ./src -d ./build/debug --source-maps",
-    "prestart": "npm run build",
     "start": "node ./build/release/server.js"
   },
   "dependencies": {
