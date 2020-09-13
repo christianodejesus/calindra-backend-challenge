@@ -1,13 +1,14 @@
 {
   "name": "calindra-backend-challenge",
   "version": "1.0.0",
-  "description": "RestAPI for Calindra Tech backend code challenge",
+  "description": "RestAPI for Calindra Tech backend challenge",
   "main": "src/server.js",
   "repository": "https://github.com/christianodejesus/calindra-backend-challenge.git",
   "author": "Christiano Marques <https://github.com/christianodejesus>",
   "license": "MIT",
   "scripts": {
     "lint": "./node_modules/.bin/eslint ./src/",
+    "setup:env": "cp .env.example .env",
     "dev": "./node_modules/.bin/nodemon --exec sucrase-node ./src/server.js",
     "prebuild": "rm -Rf build/**",
     "build": "./node_modules/.bin/babel ./src -d",
