@@ -25,6 +25,8 @@ $ npm run setup:env # This will setup an .env file with the environment variable
 ```
 
 Before you run the API, you need to provide your [Google Maps Geocode API Key](https://developers.google.com/maps/documentation/geocoding/get-api-key) in the .env file, to do this, open .env and set your API Key in the GOOGLE_API_KEY variable and save the .env file.
+
+The default application port is 3080, if you want to change this, edit .env file and change PORT variable value and save the file.
 <br><br>
 
 ## Running the RestAPI
@@ -37,7 +39,8 @@ $ npm run dev # To run the API for development
 $ npm run build # To build and run the API
 $ npm start
 ```
-<br>
+Open [http://localhost:3080](http://localhost:3080) in you browser or API test application like Postman. If you configured your PORT variable to other value than default port, please change the URL according to your configuration.
+<br><br>
 
 ## Geocode API Endpoints
 <br>
